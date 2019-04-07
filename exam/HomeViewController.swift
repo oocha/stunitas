@@ -27,6 +27,7 @@ class HomeViewController: UITableViewController {
         if #available(iOS 11.0, *) {
             self.navigationItem.searchController = search
         } else {
+            search.hidesNavigationBarDuringPresentation = false
             self.navigationItem.titleView = search.searchBar
         }
         
@@ -89,7 +90,7 @@ extension HomeViewController: UISearchResultsUpdating, UITableViewDataSourcePref
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             guard current == self.search.searchBar.text else { return }
-//            self.viewModel.data.accept(Model(documents: [], meta: [:]))
+            self.viewModel.data.accept(Model.init(documents: [], meta: [:]))
             self.viewModel.requestData(query: current)
         }
     }

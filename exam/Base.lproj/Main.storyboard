@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-273" y="525"/>
         </scene>
-        <!--Home View Controller-->
+        <!-- -->
         <scene sceneID="j2F-6M-mSb">
             <objects>
                 <tableViewController id="3yi-ZW-2og" customClass="HomeViewController" customModule="exam" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +66,10 @@
                             <outlet property="delegate" destination="3yi-ZW-2og" id="bP3-sq-DCU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0UX-u0-uKP"/>
+                    <navigationItem key="navigationItem" title=" " id="0UX-u0-uKP">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fh1-bd-QXI"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYx-Xy-pwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
